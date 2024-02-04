@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import FootprintIcon from "./icons/FootPrintIcon";
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -13,30 +14,29 @@ const LogoBox = styled.span`
     line-height: 20px;
     padding: 10px;
 
-    &:hover img {
+    > svg {
+        transition: 200ms ease;
+    }
+
+    &:hover > svg {
         transform: rotate(20deg);
     }
 `;
 
 const Logo = () => {
-    const footPrintImg = `/images/footprint${useColorModeValue(
-        "",
-        "-dark"
-    )}.png`;
-
     return (
-        <Link href={"/"}>
+        <Link href={"/"} scroll={false}>
             <LogoBox>
-                <Image src={footPrintImg} width={20} height={20} alt="logo" />
+                <FootprintIcon />
+                <Text
+                    color={useColorModeValue("gray.800", "whiteAlpha.900")}
+                    fontFamily={"M PLUS Rounded 1c"}
+                    fontWeight={"bold"}
+                    ml={3}
+                >
+                    Rudra Behera
+                </Text>
             </LogoBox>
-            <Text
-                color={useColorModeValue("gray.800", "whiteAlpha.900")}
-                fontFamily={"M PLUS Rounded 1c"}
-                fontWeight={"bold"}
-                ml={3}
-            >
-                Rudra Behera
-            </Text>
         </Link>
     );
 };
