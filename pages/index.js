@@ -16,6 +16,10 @@ import Paragraph from "./components/paragraph";
 import Image from "next/image";
 import NextLink from "next/link";
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from "react-icons/io5";
+import { BioSection, BioYear } from "./components/bio";
+import { GridItem } from "./components/grid-items";
+import thumbYouTube from "../public/images/links/youtube.png";
+import thumbInkdrop from "../public/images/works/inkdrop_eyecatch.png";
 
 const Home = () => {
     return (
@@ -34,24 +38,31 @@ const Home = () => {
                     <Heading as="h2" variant="page-title">
                         Rudra Behera
                     </Heading>
-                    <p>Digital Craftsman ( Engineer / Developer )</p>
+                    <p>Digital Craftsman ( Engineer / Developer / Artist )</p>
                 </Box>
                 <Box
                     flexShrink={0}
                     mt={{ base: 4, md: 0 }}
                     ml={{ md: 6 }}
-                    align="center"
+                    textAlign="center"
                 >
-                    <Image
+                    <Box
                         borderColor="whiteAlpha.800"
                         borderWidth={2}
                         borderStyle="solid"
-                        maxWidth="100px"
+                        w="100px"
+                        h="100px"
                         display="inline-block"
                         borderRadius="full"
-                        src="/images/rudra.jpg"
-                        alt="Profile Image"
-                    />
+                        overflow="hidden"
+                    >
+                        <Image
+                            src="/images/rudra.jpg"
+                            alt="Profile image"
+                            width="100"
+                            height="100"
+                        />
+                    </Box>
                 </Box>
             </Box>
             <Section delay={0.1}>
@@ -104,22 +115,21 @@ const Home = () => {
                     Bio
                 </Heading>
                 <BioSection>
-                    <BioYear>1984</BioYear>
-                    Born in Osaka (大阪), Japan.
+                    <BioYear>1999</BioYear>
+                    Born in Bhubaneswar, India.
                 </BioSection>
                 <BioSection>
-                    <BioYear>2010</BioYear>
-                    Completed the Master&apos;s Program in the Graduate School
-                    of Information Science at Nara Institute of Science and
-                    Technology
-                    (奈良先端科学技術大学院大学情報科学研究科修士課程)
+                    <BioYear>2023</BioYear>
+                    Completed the Bachelor&apos;s Program in the field of
+                    Computer Science at Silicon Institute Of Technology,
+                    Bhubaneswar, Odisha.
                 </BioSection>
-                <BioSection>
+                {/* <BioSection>
                     <BioYear>2010</BioYear>
                     Worked at Yahoo! Japan (ヤフー株式会社入社)
-                </BioSection>
+                </BioSection> */}
                 <BioSection>
-                    <BioYear>2012 to present</BioYear>
+                    <BioYear>2023 - present</BioYear>
                     Working as a freelancer
                 </BioSection>
             </Section>
@@ -129,15 +139,7 @@ const Home = () => {
                     I ♥
                 </Heading>
                 <Paragraph>
-                    Art, Music,{" "}
-                    <Link href="https://illust.odoruinu.net/" target="_blank">
-                        Drawing
-                    </Link>
-                    , Playing Drums,{" "}
-                    <Link href="https://500px.com/p/craftzdog" target="_blank">
-                        Photography
-                    </Link>
-                    , Leica, Machine Learning
+                    Art, Music, , Football, Chess, Coding & Travelling.
                 </Paragraph>
             </Section>
 
@@ -148,7 +150,7 @@ const Home = () => {
                 <List>
                     <ListItem>
                         <Link
-                            href="https://github.com/craftzdog"
+                            href="https://github.com/Rudra-cs"
                             target="_blank"
                         >
                             <Button
@@ -156,13 +158,13 @@ const Home = () => {
                                 colorScheme="teal"
                                 leftIcon={<IoLogoGithub />}
                             >
-                                @craftzdog
+                                @Rudra-cs
                             </Button>
                         </Link>
                     </ListItem>
                     <ListItem>
                         <Link
-                            href="https://twitter.com/inkdrop_app"
+                            href="https://twitter.com/rudratwts"
                             target="_blank"
                         >
                             <Button
@@ -170,11 +172,11 @@ const Home = () => {
                                 colorScheme="teal"
                                 leftIcon={<IoLogoTwitter />}
                             >
-                                @inkdrop_app (English)
+                                @rudratwts
                             </Button>
                         </Link>
                     </ListItem>
-                    <ListItem>
+                    {/* <ListItem>
                         <Link
                             href="https://twitter.com/craftzdog"
                             target="_blank"
@@ -187,10 +189,10 @@ const Home = () => {
                                 @craftzdog (日本語)
                             </Button>
                         </Link>
-                    </ListItem>
+                    </ListItem> */}
                     <ListItem>
                         <Link
-                            href="https://instagram.com/craftzdog"
+                            href="https://instagram.com/rudraooo7"
                             target="_blank"
                         >
                             <Button
@@ -198,7 +200,7 @@ const Home = () => {
                                 colorScheme="teal"
                                 leftIcon={<IoLogoInstagram />}
                             >
-                                @craftzdog
+                                @rudraooo7
                             </Button>
                         </Link>
                     </ListItem>
