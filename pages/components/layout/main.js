@@ -12,6 +12,7 @@ const LazyVoxelDog = dynamic(() => import("../voxel-dog"), {
 });
 
 const Main = ({ children, router }) => {
+    const urlPath = router;
     return (
         <Box as="main" pb={8}>
             <Head>
@@ -26,10 +27,10 @@ const Main = ({ children, router }) => {
                     href="/favicon.ico"
                     type="image/x-icon"
                 />
-                <meta name="twitter:title" content="Takuya Matsuyama" />
+                <meta name="twitter:title" content="Rudra Behera" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@craftzdog" />
-                <meta name="twitter:creator" content="@craftzdog" />
+                <meta name="twitter:site" content="@rudratwts" />
+                <meta name="twitter:creator" content="@rudratwts" />
                 <meta
                     name="twitter:image"
                     content="https://www.craftz.dog/card.png"
@@ -44,7 +45,7 @@ const Main = ({ children, router }) => {
                 <title>Rudra Behera - Homepage</title>
             </Head>
 
-            <Navbar path={router.asPath} />
+            <Navbar path={urlPath} />
 
             <Container maxW="container.md" pt={14}>
                 <LazyVoxelDog />

@@ -15,7 +15,12 @@ import Section from "./section";
 import Paragraph from "./components/paragraph";
 import Image from "next/image";
 import NextLink from "next/link";
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from "react-icons/io5";
+import {
+    IoLogoTwitter,
+    IoLogoInstagram,
+    IoLogoGithub,
+    IoLogoLinkedin,
+} from "react-icons/io5";
 import { BioSection, BioYear } from "./components/bio";
 import { GridItem } from "./components/grid-items";
 import thumbYouTube from "../public/images/links/youtube.png";
@@ -23,13 +28,14 @@ import thumbInkdrop from "../public/images/works/inkdrop_eyecatch.png";
 
 const Home = () => {
     return (
-        <Container>
+        <Container css={{ position: "relative" }}>
             <Box
                 borderRadius={"lg"}
                 bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
                 p={3}
                 mb={6}
                 align={"center"}
+                css={{ backdropFilter: "blur(10px)" }}
             >
                 Hello, I&apos;m a full stack developer based in India!
             </Box>
@@ -70,13 +76,14 @@ const Home = () => {
                     Work
                 </Heading>
                 <Paragraph>
-                    Takuya is a freelance and a full-stack developer based in
-                    Osaka with a passion for building digital services/stuff he
+                    Rudra is a freelancer and a full-stack developer based in
+                    India with a passion for building digital services/stuff he
                     wants. He has a knack for all things launching products,
                     from planning and designing all the way to solving real-life
                     problems with code. When not online, he loves hanging out
-                    with his camera. Currently, he is living off of his own
-                    product called{" "}
+                    with his camera and play football.
+                    {/* Currently, he is living
+                    off of his own product called{" "}
                     <Link
                         as={NextLink}
                         href="/works/inkdrop"
@@ -85,27 +92,17 @@ const Home = () => {
                     >
                         Inkdrop
                     </Link>
-                    . He publishes content for marketing his products and his
-                    YouTube channel called &quot;
-                    <Link
-                        as={NextLink}
-                        href="https://www.youtube.com/devaslife"
-                        passHref
-                        target="_blank"
-                    >
-                        Dev as Life
-                    </Link>
-                    &quot; has more than 100k subscribers.
+                    . */}
                 </Paragraph>
                 <Box align="center" my={4}>
                     <Button
                         as={NextLink}
-                        href="/works"
+                        href="/resume"
                         scroll={false}
                         rightIcon={<ChevronRightIcon />}
                         colorScheme="teal"
                     >
-                        My portfolio
+                        Resume
                     </Button>
                 </Box>
             </Section>
@@ -120,17 +117,17 @@ const Home = () => {
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Completed the Bachelor&apos;s Program in the field of
-                    Computer Science at Silicon Institute Of Technology,
-                    Bhubaneswar, Odisha.
+                    Completed the Bachelor&apos;s in Technology Program in the
+                    field of Computer Science at Silicon Institute Of
+                    Technology, Bhubaneswar, Odisha.
                 </BioSection>
                 {/* <BioSection>
                     <BioYear>2010</BioYear>
                     Worked at Yahoo! Japan (ヤフー株式会社入社)
                 </BioSection> */}
                 <BioSection>
-                    <BioYear>2023 - present</BioYear>
-                    Working as a freelancer
+                    <BioYear>2023 - Present</BioYear>
+                    Working as a software engineer / freelancer
                 </BioSection>
             </Section>
 
@@ -190,6 +187,20 @@ const Home = () => {
                             </Button>
                         </Link>
                     </ListItem> */}
+                    <ListItem>
+                        <Link
+                            href="https://linkedin.com/in/rudrabehera"
+                            target="_blank"
+                        >
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoLinkedin />}
+                            >
+                                @rudrabehera
+                            </Button>
+                        </Link>
+                    </ListItem>
                     <ListItem>
                         <Link
                             href="https://instagram.com/rudraooo7"

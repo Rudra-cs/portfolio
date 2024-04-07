@@ -21,7 +21,7 @@ const Works = () => (
             </Heading>
 
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                <Section>
+                <Section delay={0.1}>
                     <WorkGridItem
                         id="inkdrop"
                         title="Inkdrop"
