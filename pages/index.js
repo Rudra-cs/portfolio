@@ -25,6 +25,7 @@ import { BioSection, BioYear } from "./components/bio";
 import { GridItem } from "./components/grid-items";
 import thumbYouTube from "../public/images/links/youtube.png";
 import thumbInkdrop from "../public/images/works/inkdrop_eyecatch.png";
+import Github from "./components/github";
 
 const Home = () => {
     return (
@@ -117,7 +118,7 @@ const Home = () => {
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Completed the Bachelor&apos;s in Technology Program in the
+                    Completed the Bachelor&apos;s of Technology Program in the
                     field of Computer Science at Silicon Institute Of
                     Technology, Bhubaneswar, Odisha.
                 </BioSection>
@@ -145,20 +146,6 @@ const Home = () => {
                     On the web
                 </Heading>
                 <List>
-                    <ListItem>
-                        <Link
-                            href="https://github.com/Rudra-cs"
-                            target="_blank"
-                        >
-                            <Button
-                                variant="ghost"
-                                colorScheme="teal"
-                                leftIcon={<IoLogoGithub />}
-                            >
-                                @Rudra-cs
-                            </Button>
-                        </Link>
-                    </ListItem>
                     <ListItem>
                         <Link
                             href="https://twitter.com/rudratwts"
@@ -215,9 +202,27 @@ const Home = () => {
                             </Button>
                         </Link>
                     </ListItem>
+                    <ListItem>
+                        <Link
+                            href="https://github.com/Rudra-cs"
+                            target="_blank"
+                        >
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoGithub />}
+                            >
+                                @rudra-cs
+                            </Button>
+                        </Link>
+                    </ListItem>
                 </List>
 
-                <SimpleGrid columns={[1, 2, 2]} gap={6}>
+                <Box align="center" my={4} ml={4}>
+                    <Github />
+                </Box>
+
+                {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
                     <GridItem
                         href="https://www.youtube.com/devaslife"
                         title="Dev as Life"
@@ -232,25 +237,25 @@ const Home = () => {
                     >
                         A Markdown note-taking app
                     </GridItem>
-                </SimpleGrid>
+                </SimpleGrid> */}
 
                 <Heading as="h3" variant="section-title">
-                    Newsletter
+                    Want to Hire me?
                 </Heading>
                 <p>
-                    Join me on a behind-the-scenes coding journey. Weekly
-                    updates on projects, tutorials, and videos
+                    Have an exciting project you need help with? Send me an
+                    email or contact me via instant message!
                 </p>
 
                 <Box align="center" my={4}>
                     <Button
                         as={NextLink}
-                        href="https://www.devas.life/"
+                        href="mailto:rudra.behera50@gmail.com"
                         scroll={false}
                         leftIcon={<EmailIcon />}
                         colorScheme="teal"
                     >
-                        Sign up my newsletter here
+                        rudra.behera50@gmail.com
                     </Button>
                 </Box>
             </Section>
